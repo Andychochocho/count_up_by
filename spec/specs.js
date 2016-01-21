@@ -14,4 +14,7 @@ describe ('countByInterval', function() {
   it("will return false when NaN is inputted", function(){
     expect(countByInterval("apple", 5)).to.eql(false);
   })
+  it("will be able to handle negative numbers",function() {
+    expect(countByInterval(-10,-1)).to.eql([-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]);
+  });
 });
