@@ -11,4 +11,7 @@ describe ('countByInterval', function() {
   it("will return false when it has empty input", function(){
     expect(countByInterval(5)).to.eql(false);
   });
+  it("will return false when NaN is inputted", function(){
+    expect(countByInterval("apple", 5)).to.eql(false);
+  })
 });
