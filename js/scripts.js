@@ -1,6 +1,6 @@
-function countByOne(countTo) {
+function countByInterval(countTo, countBy) {
   var array = [];
-  for (var i = 1; i <= countTo; i++) {
+  for (var i = countBy; i <= countTo; i+= countBy) {
     array.push(i);
   }
   return array;

@@ -1,5 +1,8 @@
-describe ('countByOne', function() {
+describe ('countByInterval', function() {
   it ("will count up to designated number from one and intervals of one", function(){
-    expect(countByOne(10)).to.eql([1,2,3,4,5,6,7,8,9,10]);
+    expect(countByInterval(10,1)).to.eql([1,2,3,4,5,6,7,8,9,10]);
+  });
+  it("will count up to designated number in a specialized interval", function(){
+    expect(countByInterval(12,3)).to.eql([3,6,9,12]);
   });
 });
