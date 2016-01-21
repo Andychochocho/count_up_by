@@ -17,4 +17,7 @@ describe ('countByInterval', function() {
   it("will be able to handle negative numbers",function() {
     expect(countByInterval(-10,-1)).to.eql([-1,-2,-3,-4,-5,-6,-7,-8,-9,-10]);
   });
+  it("will return false if a positive and negative number are entered as arguments",function() {
+    expect(countByInterval(-10,1)).to.eql(false);
+  });
 });

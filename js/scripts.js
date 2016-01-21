@@ -11,10 +11,16 @@ function countByInterval(countTo, countBy) {
   }
   var array = [];
   if (countTo <= 0) {
+    if (countBy >= 0) {
+      return false;
+    }
     for (var i = countBy; i >= countTo; i+= countBy) {
       array.push(i);
     }
   } else {
+    if (countBy <= 0) {
+      return false;
+    }
     for (var i = countBy; i <= countTo; i+= countBy) {
       array.push(i);
     }
